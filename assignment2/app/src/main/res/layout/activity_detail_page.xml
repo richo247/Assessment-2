@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.detail_page">
+
+
+    <Button
+        android:id="@+id/btn_back_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginLeft="162dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginRight="162dp"
+        android:text="back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_date" />
+
+    <TextView
+        android:id="@+id/detail_email"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:text="Email"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/detail_phone"
+        app:layout_constraintEnd_toEndOf="@+id/detail_phone"
+        app:layout_constraintStart_toStartOf="@+id/detail_phone"
+        app:layout_constraintTop_toBottomOf="@+id/detail_name" />
+
+    <TextView
+        android:id="@+id/detail_phone"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:text="Phone"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/detail_date"
+        app:layout_constraintEnd_toEndOf="@+id/detail_date"
+        app:layout_constraintStart_toStartOf="@+id/detail_date"
+        app:layout_constraintTop_toBottomOf="@+id/detail_email" />
+
+    <TextView
+        android:id="@+id/detail_date"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:autoText="false"
+        android:text="Date"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back_detail"
+        app:layout_constraintEnd_toEndOf="@+id/btn_back_detail"
+        app:layout_constraintStart_toStartOf="@+id/btn_back_detail"
+        app:layout_constraintTop_toBottomOf="@+id/detail_phone" />
+
+    <TextView
+        android:id="@+id/detail_name"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:text="Name"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/detail_email"
+        app:layout_constraintEnd_toEndOf="@+id/detail_email"
+        app:layout_constraintStart_toStartOf="@+id/detail_email"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-->Title bar<!-->
+    <color name="colorPrimary">#8734FF</color>
+    <!-->top Title bar<!-->
+    <color name="colorPrimaryDark">#3700B3</color>
+    <!-->??!-->
+    <color name="colorAccent">#5454F3</color>
+
+    <color name="colorPrimaryNight">#4A1D1D</color>
+    <color name="colorPrimaryDarkNight">#000000</color>
+    <color name="colorAccentNight">#CCCCCC</color>
+
+    <color name="primaryTitleColor">#000000</color>
+    <color name="primaryTitleColorNight">#DDD5D5</color>
+
+</resources>
