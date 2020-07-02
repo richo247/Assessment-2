@@ -39,10 +39,10 @@ public class MainListRecyclerViewAdaptor extends RecyclerView.Adapter<MainListRe
     @Override
     public void onBindViewHolder(@NonNull MainListRecyclerViewAdaptor.MainListItemViewHolder holder, int position)
     {
-        holder.txtViewName.setText(contactList.get(position).getName());
         holder.txtViewPhone.setText(contactList.get(position).getPhone());
-        holder.txtViewEmail.setText(contactList.get(position).getEmail());
+        holder.txtViewName.setText(contactList.get(position).getName());
         holder.txtViewDate.setText(contactList.get(position).getDate());
+        holder.txtViewEmail.setText(contactList.get(position).getEmail());
     }
 
     @Override
@@ -57,10 +57,10 @@ public class MainListRecyclerViewAdaptor extends RecyclerView.Adapter<MainListRe
 
     class MainListItemViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener
     {
-        private TextView txtViewName;
         private TextView txtViewPhone;
-        private TextView txtViewEmail;
+        private TextView txtViewName;
         private TextView txtViewDate;
+        private TextView txtViewEmail;
 
         ContactRecordListener contactRecordListener;
 
@@ -89,7 +89,7 @@ public class MainListRecyclerViewAdaptor extends RecyclerView.Adapter<MainListRe
         public boolean onLongClick(View view)
         {
             contactRecordListener.onLongClickOfAContact(getAdapterPosition());
-            ClipData data = ClipData.newPlainText("ClipData","What's this?");
+            ClipData data = ClipData.newPlainText("ClipData","Hello?");
             View.DragShadowBuilder myShadowBuilder = new View.DragShadowBuilder(view);
             view.startDrag(data, myShadowBuilder, view, 0);
 

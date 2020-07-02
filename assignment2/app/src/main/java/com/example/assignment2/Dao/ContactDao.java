@@ -14,27 +14,22 @@ import java.util.List;
 @androidx.room.Dao
 public interface ContactDao
 {
-    //create
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    public void insert(Contact...contacts);
+    @Query("SELECT * FROM contact WHERE id = :contactID")
+    public Contact getContactById(int contactID);
 
-    //update
     @Update
     public void update(Contact...contacts);
 
-    //delete
-    @Delete
-    public void delete(Contact...contacts);
-
-    //delete all
     @Query("DELETE FROM contact")
     public void clearTable();
 
-    //read all
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    public void insert(Contact...contacts);
+
+    @Delete
+    public void delete(Contact...contacts);
+
     @Query("SELECT * FROM contact")
     public List<Contact> getAllContacts();
 
-    //read by id
-    @Query("SELECT * FROM contact WHERE id = :contactID")
-    public Contact getContactById(int contactID);
 }

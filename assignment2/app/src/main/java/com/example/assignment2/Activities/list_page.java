@@ -73,7 +73,7 @@ public class list_page extends AppCompatActivity implements MainListRecyclerView
 
         if (hash.myHash == null)
         {
-            Log.d(TAG, "ViewModel has not been created yet.");
+            Log.d(TAG, "ViewModel doesn't exist.");
 
             ArrayList<Contact> allContacts = (ArrayList<Contact>) PhonebookDb.getInstance(this).contactDao().getAllContacts();
             hash.myHash = new MyHash();
@@ -153,6 +153,7 @@ public class list_page extends AppCompatActivity implements MainListRecyclerView
         adaptor.reloadContactList(searchList);
         return false;
     }
+
     public boolean onCreateOptionsMenu(Menu menu)
     {
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);
@@ -191,7 +192,8 @@ public class list_page extends AppCompatActivity implements MainListRecyclerView
         deletingContact = adaptor.getContactList().get(position);
     }
 
-    private void deleteContact(Context context) {
+    private void deleteContact(Context context)
+    {
         findViewById(R.id.float_delete_button).setOnDragListener(new View.OnDragListener()
         {
             @Override
@@ -211,7 +213,7 @@ public class list_page extends AppCompatActivity implements MainListRecyclerView
                         break;
 
                     case DragEvent.ACTION_DROP:
-                        confirm.setMessage("Do you wish to Delete?");
+                        confirm.setMessage("Delete contact?");
 
                         confirm.setPositiveButton("YES", new DialogInterface.OnClickListener()
                         {
@@ -228,7 +230,7 @@ public class list_page extends AppCompatActivity implements MainListRecyclerView
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i)
                             {
-                                Toast.makeText(list_page.this, "Contact couldn't be deleted", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(list_page.this, "Contact not deleted, try again", Toast.LENGTH_SHORT).show();
                                 dialogInterface.dismiss();
                             }
                         });

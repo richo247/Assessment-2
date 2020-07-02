@@ -481,13 +481,12 @@
             android:id="@+id/float_delete_button"
             android:layout_width="57dp"
             android:layout_height="57dp"
-            android:layout_marginBottom="8dp"
             android:clickable="true"
             app:backgroundTint="@color/colorPrimary"
-            app:layout_constraintBottom_toTopOf="@id/float_search_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:maxImageSize="30dp"
-            app:srcCompat="@android:drawable/ic_menu_delete" />
+            app:srcCompat="@android:drawable/ic_menu_delete"
+            tools:layout_editor_absoluteY="406dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/float_add_button"
@@ -524,18 +523,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:maxImageSize="30dp"
             app:srcCompat="@drawable/azwhite" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/float_search_button"
-            android:layout_width="57dp"
-            android:layout_height="57dp"
-            android:layout_marginBottom="8dp"
-            android:clickable="true"
-            app:backgroundTint="@color/colorPrimary"
-            app:layout_constraintBottom_toTopOf="@id/float_AtoZ_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:maxImageSize="30dp"
-            app:srcCompat="@android:drawable/ic_menu_search" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
